@@ -1,14 +1,16 @@
 Rails.application.routes.draw do
+root to: "sites#index"
+
+ resources :users
+ resources :articles
+  
   get 'sessions/new'
 
   get 'sessions/create'
 
   get 'sessions/destroy'
 
- root to: "sites#index"
-
- resources :users
- resources :articles
+ 
 
   get 'sites/index'
 
